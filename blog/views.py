@@ -4,11 +4,12 @@ from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 
-def home(request):
-	context = {
-		'posts' : Post.objects.all()
-	}
-	return render(request, 'blog/home.html', context)
+'''replaced by PostListView'''
+# def home(request):
+# 	context = {
+# 		'posts' : Post.objects.all()
+# 	}
+# 	return render(request, 'blog/home.html', context)
 
 
 class PostListView(ListView):
@@ -65,5 +66,5 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 
 
-def about(request):
-	return render(request, 'blog/about.html',{'title': 'About'})
+def front_page(request):
+	return render(request, 'blog/about.html',{'title': 'Home'})
