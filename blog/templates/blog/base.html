@@ -18,7 +18,7 @@
 		<title>Django Blog</title>
 	{% endif %}
 </head>
-<body>
+<body bgcolor="black">
 	<header class="site-header">
 	  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
 	    <div class="container">
@@ -57,17 +57,6 @@
 	    		{% endfor %}
 	    	{% endif %}
 	    	{% block content %}{% endblock %}
-	    </div>
-	    <div class="col-md-4">
-	      <div class="content-section">
-	        <h3>To do list.</h3>
-	        <p class='text-muted'>Currently working on.
-	          <ul class="list-group">
-	            <li class="list-group-item list-group-item-light">Automate the Boring Stuff</li>
-	            <li class="list-group-item list-group-item-light">Logo Animation</li>
-	          </ul>
-	        </p>
-	      </div>
 	    </div>
 	  </div>
 	</main>

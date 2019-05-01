@@ -36,4 +36,17 @@
 			<a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
 		{% endif %}
 	{% endif %}
+
+</div> <!-- Ends div after CONTENT BLOCK from template to separate list and keep it on right -->
+    <div class="col-md-4">
+      <div class="content-section">
+        <h3>To do list.</h3>
+        <p class='text-muted'>Currently working on.
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-light">Automate the Boring Stuff</li>
+            <li class="list-group-item list-group-item-light">Logo Animation</li>
+          </ul>
+        </p>
+      </div>
+    </div>
 {% endblock content %}
