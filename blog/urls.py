@@ -3,8 +3,8 @@ from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView,
 from . import views
 
 urlpatterns = [
-	path('blog/', views.front_page, name='blog-about'), # The About page 
-    path('', PostListView.as_view(), name='blog-posts'), # The good looking posts page
+	path('', PostListView.as_view(), name='blog-home'), 	
+	path('about/', views.about, name='blog-about'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
@@ -13,5 +13,8 @@ urlpatterns = [
     #path('blog/', PostListView.as_view(), name='blog-home') // This is probably extra but keeping as record
 ]
 
-#path('', PostListView.as_view(), name='blog-home') 	
+#path('', PostListView.as_view(), name='blog-home') 	the originals
 #path('about/', views.about, name='blog-about')
+
+#path('', views.front_page, name='blog-about'), #// Front 
+#path('blog/', PostListView.as_view(), name='blog-posts'), # The good looking but not working
