@@ -30,18 +30,18 @@ class UserPostListView(ListView):
 		return Post.objects.filter(author=user).order_by('-date_posted')
 
 class PostDetailView(DetailView):
-	model = Post
+	model = Post # <blog>/<post>_<detail>.html
 
 class PostCreateView(LoginRequiredMixin, CreateView):
 	model = Post
-	fields = ['title', 'content', 'image']
+	fields = ['title', 'content', 'image'] # <blog>/<post>_<form>.html
 
 	def form_valid(self, form):
 		form.instance.author = self.request.user
 		return super().form_valid(form)
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-	model = Post
+	model = Post # <blog>/<post>_<form>.html automatic
 	fields = ['title', 'content', 'image']
 
 	def form_valid(self, form):
