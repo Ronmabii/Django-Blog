@@ -2,30 +2,30 @@
 {% block content%}
 </main> <!-- exits template container early-->
 
-<div class="jumbotron bg-light">
-	<h2 class="text-black">Hey, I'm Ronnie</h2>
-    <p>I am a programmer who started with <mark>SQL</mark> in December 2018</p>
-    <p>Then I learned some <mark>Python</mark> and started making this site</p>
-  </h1>
-</div>
-	
-<section class="bg-primary text-white mb-0" id="about">
-  <div class="container">
-    <h2 class="text-center text-uppercase text-white">About</h2>
-    <hr class="star-light mb-5">
-    <div class="row">
-      <div class="col-lg-4 ml-auto">
-        <p class="text-white">This site is a work in progress</p>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8">
+      <div class="jumbotron bg-light content-section">
+      	<h2 class="text-black">Hey, I'm Ronnie</h2>
+          <p>I am a programmer who started with <mark>SQL</mark> in December 2018</p>
+          <p>Then I learned some <mark>Python</mark> and started making this blog to write down any little bits of progress I make.</p>
+        </h1>
       </div>
-      <div class="col-lg-4 mr-auto">
-        <p class="text-white">Sorry about the 30 seconds loading time</p>
-      </div>
-      <div class="col-lg-4 mr-auto">
-        <p class="text-white">Made with help of Youtube/Google/More Google</p>
-      </div>
-
+      	
+      <section class="bg-light mb-0 content-section" id="about">
+        <div class="container">
+          <h2 class="text-center text-uppercase text-black">About</h2>
+          <hr class="star-light mb-5">
+          <div class="row">
+            <div class="col-lg-4 ml-auto">
+              <p class="text-black">This site is a work in progress</p>
+            </div>
+            <div class="col-lg-4 mr-auto">
+              <p class="text-black">Sorry about the 30 seconds loading time</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
-</section>
 
 {% endblock content %}
